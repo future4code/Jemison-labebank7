@@ -27,7 +27,7 @@ Caso a documentação acima não tenha coberto a sua dúvida, abaixo temos expli
 ## Desenvolvedores
 
 - [@sterx17](https://www.github.com/sterx17)
-- [Inserir integrante 2]
+- [Rafael Lopes]((https://www.github.com/rafix923)
 - [Inserir integrante 3]
 
 ## Tecnologias utilizadas
