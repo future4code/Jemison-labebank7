@@ -1,7 +1,9 @@
+![LabeBank Logo](https://i.ibb.co/gzxY5gq/LabeBANK.png)
 
 # IWFS: Sistema Bancário para a LabeBank
 
 Aplicação para prova de conceito do LabeBank, onde criamos uma API REST para cadastrar usuários e permitir que eles movimentem seu saldo.
+
 ## Status do Projeto
 
 - Additional browser support
