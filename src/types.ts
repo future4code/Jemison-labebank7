@@ -1,3 +1,9 @@
+export enum TRANSACTIONS {
+    RECEIPT = "receipt",
+    PAYMENT = "payment",
+    TRANSFER = "transfer"
+}
+
 export type Customer = {
     name: string,
     CPF: string,
@@ -7,8 +13,8 @@ export type Customer = {
 }
 
 export type AccountExtract = {
-    receipt: number,
-    payment: number,
+    transaction: TRANSACTIONS,
     date: string,
-    description: string
+    description: string,
+    value: number
 }
