@@ -1,18 +1,14 @@
-export enum TRANSACTIONS {
-    RECEIPT = "receipt",
-    PAYMENT = "payment"
-}
-
 export type Customer = {
     name: string,
     CPF: string,
     birthday: string,
-    availableCredit: number
+    availableCredit: number,
+    transactions: AccountExtract[]
 }
 
 export type AccountExtract = {
-    receipt: string,
-    payment: string,
+    receipt: number,
+    payment: number,
     date: string,
     description: string
 }
