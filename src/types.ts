@@ -18,3 +18,9 @@ export type AccountExtract = {
     description: string,
     value: number
 }
+
+export type Err = {
+    code: number,
+    name: string,
+    message: string
+}
