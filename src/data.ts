@@ -24,7 +24,7 @@ export const allCustomers: types.Customer[] = [
     {
         name: "Stephany",
         CPF: "321.789.943-68",
-        birthday: "03-04-2003",
+        birthday: "03-04-2010",
         availableCredit: 0,
         transactions: [
             {

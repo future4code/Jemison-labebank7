@@ -20,3 +20,9 @@ export const internalServerError:types.Err = {
     name: "internalServerError",
     message: "500 Internal Server Error"
 }
+
+export const userUnderEighteenYearsOld:types.Err = {
+    code: 400,
+    name: 'userUnderEighteenYearsOld',
+    message: 'You must be over 18 to create an account.'
+}

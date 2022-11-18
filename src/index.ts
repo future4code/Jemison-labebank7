@@ -64,9 +64,29 @@ app.post('/users', (req: Request, res: Response) => {
             let newCustomersList: types.Customer[] = [...allCustomers, newCustomer]
             res.status(201).send(newCustomersList)
         }
+
+        const [day, month, year] = newCustomer.birthday.split("-");
+        const birthdayDate = new Date(Number(year), Number(month) - 1, Number(day));
+        const today = new Date();
+        const difference = Math.abs(birthdayDate.getTime() - today.getTime());
+        const convertInYears = 1000 * 3600 * 24 * 365
+        const currentAge = Math.ceil(difference / convertInYears);
+
+        if (currentAge < 18) {
+            const err = {
+                code: errors.userUnderEighteenYearsOld.code,
+                name: errors.userUnderEighteenYearsOld.name,
+                message: errors.userUnderEighteenYearsOld.message
+            }
+
+            throw err;
+        }
     } catch (e: any) {
         switch (e.name) {
             case 'duplicateAccountCreationAttempt':
+                res.status(e.code).send(e.message)
+                break;
+            case 'userUnderEighteenYearsOld':
                 res.status(e.code).send(e.message)
                 break;
             default:
@@ -78,3 +98,21 @@ app.post('/users', (req: Request, res: Response) => {
 app.listen(3003, () => {
     console.log('Server is running in http://localhost:3003');
 });
+
+// const [day, month, year] = newCustomer.birthday.split("-");
+// const birthdayDate = new Date(year, month -1, day);
+// const today = new Date();
+// const difference = Math.abs(birthdayDate.getTime() - today.getTime());
+// const convertInYears = 1000 * 3600 * 24 * 365
+// const currentAge = Math.ceil(difference / convertInYears);
+
+// if (currentAge < 18) {
+//     const err = {
+//         code: errors.userUnderEighteenYearsOld.code,
+//         name: errors.userUnderEighteenYearsOld.name,
+//         message: errors.userUnderEighteenYearsOld.message
+//     }
+
+//     throw err;
+// }
+
