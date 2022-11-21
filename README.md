@@ -28,7 +28,7 @@ Caso a documentação acima não tenha coberto a sua dúvida, abaixo temos expli
 
 - [@sterx17](https://www.github.com/sterx17)
 - [Rafael Lopes](https://www.github.com/rafix923)
-- [Inserir integrante 3]
+- [Alessandro Silvino](https://github.com/AlessandroSilvino)
 
 ## Tecnologias utilizadas
 
